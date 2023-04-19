@@ -15,6 +15,12 @@ In the past few weeks, we have observed the following issues:
 2. Having pandas 0.20 on one machine and pandas 0.21 on another can change how the metrics are calculated slightly
 3. Struggling to manage =virtualenvs= for different packages, broken =virtualenvs=
 
+Here, I will spin up a Python container, with all the tools/packages that are required for my project.
+This includes setting up a Jupyter notebook server with access to all those packages.
+
+I can open a Jupyter notebook in this container, and I am able to import all the packages that I need inside this Jupyter notebook.
+
+
 The use case we will explore here, is setting up a python machine with all the tools required for a project, and then setting up a jupyter notebook server within to access all those resources: 
 
 In the terminal run:
