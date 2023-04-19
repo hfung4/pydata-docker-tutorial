@@ -1,0 +1,7 @@
+- This is a template for creating a docker container to set up and run a flask app to serve a Python model
+- Armed with the flask app, an external application can make API calls to my model (e.g., provide values of features to my model, and get prediction). Please review Flask.
+- This is a standard way for some companies to deploy their model
+- In Hareem's company, they have insurance companies as clients. Her company will create and deploy models that predicts whether someone is a smoker based on their response on a few questions.
+- The analyst in the insurance companies will collect features values/information about a patient over the phone. She will input these values to an app (with user interface), and the front-end app will pass this information to the model via api calls. The model will return a prediction (smoker/non-smoker) back to the frontend in real-time.
+- Using docker will make the deployment of the model very stable (thus suitable for external consumption by other apps)
+- 
