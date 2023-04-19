@@ -45,4 +45,13 @@ docker run -p 8888:8888 devenv
 Now access it from your machine, try =localhost:8888=. It will ask you to copy and paste the token you were given.
 OR, you can just copy and paste the url that is given in the terminal: http://127.0.0.1:8888/?token=66a6db59ad53349417cf50dfa72bf9e4eb1e32566d707534
 
+If you run this url on your browser, you will have access to the Jupyter notebook that is running in the container. It has all the Python packages that is specified in the requirements.txt installed. 
 
+The container is now running on your machine. And you have a notebook running on that container, which can be accessed via the localhost port 8888 on your machine.
+
+Remember that the container is ephemeral (temp). If I shutdown the kernel, the notebook will be gone, as well as the container.
+Use docker ps to check for any running container (there will be none)
+Use docker ps -a to check for any previous running container (I will see a record for devenv, which tells me when it was created, when it was exited, and what commands I ran in the docker (jupyter notebook)
+If I want to share my jupyter notebook with my teammate, I can copy that notebook (ipynb) into my container, and then I will set up the container with all dependencies, and start up jupyter when the container is created and run (so my teammate can open the jupyter-notebook that I shared). If I use docker this way, I wouldn't have anymore worries about different versions of Python/packages being installed, and any system/OS level dependencies that are different between me and my teammate.
+
+Another way (say I want to run a Python script on a container) is to mount a volumne to the container. What this means is that I will select a folder on my local machine, copy my .py script in it, and mount that folder on the container. Anything I do in the folder in my local machine is "sync" to the container. If I make any changes to the .py script, those changes will automatically will "transfer over" to the script in the container.
