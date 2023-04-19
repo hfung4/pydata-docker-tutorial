@@ -43,6 +43,6 @@ docker run -p 8888:8888 devenv
 #+END_EXAMPLE
 
 Now access it from your machine, try =localhost:8888=. It will ask you to copy and paste the token you were given.
-
+OR, you can just copy and paste the url that is given in the terminal: http://127.0.0.1:8888/?token=66a6db59ad53349417cf50dfa72bf9e4eb1e32566d707534
 
 
