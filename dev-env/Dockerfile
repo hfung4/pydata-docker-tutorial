@@ -40,6 +40,7 @@ WORKDIR /home/demo
 # ENTRYPOINT is a flavour of the CMD command
 # Will run jupyter notebook command (start a new notebook) 
 # after I spin up my container by default
+# For either CMD or ENTRYPOINT, I can only have one of these command per dockerfile
 ENTRYPOINT ["jupyter", "notebook", "--ip=0.0.0.0"]
 
 
