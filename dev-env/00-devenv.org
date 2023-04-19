@@ -33,6 +33,10 @@ The dot means setting the local machine directory to the same directory where th
 file is calling is located).
 
 This should set up a jupyter notebook that you will be able to access with all the tools in the =requirements.txt= file installed. 
+Here, I use docker run devenv to create a new container from the devnev image and start it up, and then run any commands specified in the docker file.
+
+I am mapping the port 8888 in the container to port 8888 in my local machine. So in my local machine, I can open localhost:8888, which in turn will be used to access port 8888 in the container (that's the port of the Jupyter notebook server)
+
 
 #+BEGIN_EXAMPLE
 docker run -p 8888:8888 devenv
