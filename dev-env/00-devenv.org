@@ -28,6 +28,10 @@ In the terminal run:
 docker build -t devenv .
 #+END_EXAMPLE
 
+Build the image using the dockerfile. Tag it "devenv"
+The dot means setting the local machine directory to the same directory where the dockerfile is located (and where all the files your docker
+file is calling is located).
+
 This should set up a jupyter notebook that you will be able to access with all the tools in the =requirements.txt= file installed. 
 
 #+BEGIN_EXAMPLE
