@@ -10,7 +10,7 @@
 ### Steps to run container:
   - Go to the model-deploy directory, open terminal
   - We need to first build the image from the dockerfile:
-    - docker build -t model.
+    - docker build -t model .
     - note that 'model' is the name/tag that I give to the image, can be anything else, '.' is the path to the dockerfile (which is my currently directory)
   - Once the image is built, I can create a container from the image
   - docker run -p 1000:80 model
