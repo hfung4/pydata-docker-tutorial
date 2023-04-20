@@ -21,6 +21,6 @@
   - http://localhost:1000/prediction?f=0.06
     - [ 209.09959979]
   
-  - The way we are running the model right now is mostly to do testing (still treat this as "dev", I am just testing my deployment)
-  - I will deploy the model after testing it to AWS for example. The docker container will be a template for a EC2 that I will spin up and continuously run the flask app and serve my model predictions. The logs of the app etc... will be written/stored in S3.
+  - The way we are running the model right now is mostly to do testing (still treat this as a "dev paradigm", I am just testing my deployment using the container that has pretty much the same characterisitics as my prod environment)
+  - I will deploy the model after testing it to AWS for example. The docker container will be a "template" for a EC2 that I will set up. I will run the flask app within the EC2 (which will be up continuously) to serve my model predictions. The logs of the flask app etc... will be written/stored in S3.
     
