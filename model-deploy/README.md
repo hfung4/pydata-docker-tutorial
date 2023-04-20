@@ -7,7 +7,7 @@
 - NOTE: I can actually push this image to Dockerhub and make it a new base image that other people can build on.
 
 
-- Steps to run container:
+### Steps to run container:
   - Go to the model-deploy directory, open terminal
   - We need to first build the image from the dockerfile:
     - docker build -t model.
