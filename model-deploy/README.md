@@ -4,4 +4,22 @@
 - In Hareem's company, they have insurance companies as clients. Her company will create and deploy models that predicts whether someone is a smoker based on their response on a few questions.
 - The analyst in the insurance companies will collect features values/information about a patient over the phone. She will input these values to an app (with user interface), and the front-end app will pass this information to the model via api calls. The model will return a prediction (smoker/non-smoker) back to the frontend in real-time.
 - Using docker will make the deployment of the model very stable (thus suitable for external consumption by other apps)
-- 
+- NOTE: I can actually push this image to Dockerhub and make it a new base image that other people can build on.
+
+
+- Steps to run container:
+  - Go to the model-deploy directory, open terminal
+  - We need to first build the image from the dockerfile:
+    - docker build -t model.
+    - note that 'model' is the name/tag that I give to the image, can be anything else, '.' is the path to the dockerfile (which is my currently directory)
+  - Once the image is built, I can create a container from the image
+  - docker run -p 1000:80 model
+  - I map port 1000 on my local machine to port 80 in my container.
+  - Now, go to my local host: 1000
+  - http://localhost:1000/isAlive
+    - I should see "true"
+  - http://localhost:1000/prediction?f=0.06
+    - [ 209.09959979]
+  
+  
+    
