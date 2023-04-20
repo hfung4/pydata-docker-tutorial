@@ -25,6 +25,7 @@ app = Flask(__name__)
 def index():
     return "true"
 
+# Specify my api endpoint for making prediction
 @app.route('/prediction/', methods=['GET'])
 def get_prediction():
     feature = float(request.args.get('f'))
@@ -32,6 +33,7 @@ def get_prediction():
     pred = model.predict([[feature]])
     return str(pred)
 
+# If environment variable is 'production', I specify my port is 80 and host is local
 if __name__ == '__main__':
     if os.environ['ENVIRONMENT'] == 'production':
         app.run(port=80,host='0.0.0.0')
