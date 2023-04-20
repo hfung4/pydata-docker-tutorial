@@ -22,5 +22,5 @@
     - [ 209.09959979]
   
   - The way we are running the model right now is mostly to do testing (still treat this as "dev", I am just testing my deployment)
-  - I will deploy the model after testing it to AWS for example. The docker container will be a template for a EC2 that I will spin up and continuously run the flask app and serving my model predictions. The logs of the app etc... will be written/stored in S3.
+  - I will deploy the model after testing it to AWS for example. The docker container will be a template for a EC2 that I will spin up and continuously run the flask app and serve my model predictions. The logs of the app etc... will be written/stored in S3.
     
